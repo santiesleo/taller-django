@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Artículos</title>
+</head>
+<body>
+    <h1>Lista de Artículos</h1>
+    <ul>
+        {% for articulo in articulos %}
+        <li>
+            <strong>Título:</strong> {{ articulo.titulo }}<br>
+            <strong>Autor:</strong> {{ articulo.autor }}<br>
+            <strong>Fecha de Publicación:</strong> {{ articulo.fecha_publicacion }}<br>
+            <strong>Contenido:</strong> {{ articulo.contenido }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'nuevo_articulo' %}">Agregar nuevo artículo</a>
+</body>
+</html>
